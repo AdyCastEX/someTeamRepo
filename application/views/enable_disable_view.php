@@ -4,28 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>ICS Library</title>
-		<script type = "text/javascript">
-			function changeTextBox(value){ // This function checks the value of the text box
-				if(value=='name'){
-					string = "<input type='text' placeholder='Enter first name' name='firstname'/>";
-	            	string+= "<input type='text' placeholder='Enter middle name' name='middlename'/>";
-	            	string+= "<input type='text' placeholder='Enter last name' name='lastname'/>";
-	            	document.getElementById("divtext").innerHTML = string; 
-				}
-				else if(value=='stdno'){
-					string = "<input type='text' placeholder='Enter student number' name='studentno'/>";
-					document.getElementById("divtext").innerHTML = string;
-				}
-				else if(value=='uname'){
-					string = "<input type='text' placeholder='Enter username' name='username'/>";
-					document.getElementById("divtext").innerHTML = string;
-				}
-				else if(value=='email'){
-					string = "<input type='text' placeholder='Enter email address' name='emailadd'/>";
-					document.getElementById("divtext").innerHTML = string;
-				}
-			}
-		</script>
+		
 	</head>
 
 	<body>
@@ -92,5 +71,28 @@
 				?>
           	</div>
 		</div>
+		<script type="text/javascript" src = <?php echo JS."jquery-1.9.1.min"?>></script>
+		<script type = "text/javascript">
+			function changeTextBox(value){ // This function checks the value of the text box
+				if(value=='name'){
+					string = "<input type='text' placeholder='Enter first name' name='firstname'/>";
+	            	string+= "<input type='text' placeholder='Enter middle name' name='middlename'/>";
+	            	string+= "<input type='text' placeholder='Enter last name' name='lastname'/>";
+	            	document.getElementById("divtext").innerHTML = string; 
+				}
+				else if(value=='stdno'){
+					string = "<input type='text' placeholder='Enter student number' name='studentno'/>";
+					document.getElementById("divtext").innerHTML = string;
+				}
+				else if(value=='uname'){
+					string = "<input type='text' placeholder='Enter username' name='username'/>";
+					document.getElementById("divtext").innerHTML = string;
+				}
+				else if(value=='email'){
+					string = "<input type='text' placeholder='Enter email address' name='emailadd'/>";
+					document.getElementById("divtext").innerHTML = string;
+				}
+			}
+		</script>
 	</body>
 </html>
