@@ -30,7 +30,7 @@ Class Update_book_model extends CI_Model{
 	}
 
 	function updateLend($data){
-		$parameter = array('date_returned' => 'NOW()');// in update lend, we only need to insert the returned date, hence the use of now()	
+		$parameter = array('date_returned' => date('Y-m-d H:i:s'));// in update lend, we only need to insert the returned date, hence the use of now()	
 		$where = "transaction_no = {$data['transaction_no']}"; // where clause
 		$this->db->update('lend', $parameter, $where); // the update query accepts 3 parameters, the table name, values to be updated and the where clause
 		echo $this->db->update_string('lend', $parameter, $where);
